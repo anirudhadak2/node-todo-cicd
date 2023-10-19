@@ -30,6 +30,7 @@ there are few plugins are required
 
                                               -----------------------------------------
 here build steps in freestyle project job  -->    Build Steps :   Execute Shell  
+                             
                               docker build -t myimag  . 
                               docker  login  -u  anirudhadak2  -p  $MYPASS 
                               docker tag  myimag  anirudhadak2/mydocimg:myimag 
@@ -37,12 +38,15 @@ here build steps in freestyle project job  -->    Build Steps :   Execute Shell
                               docker logout 
                                 ----------------------------
                                 docker build -t test  . 
+
+                                
 docker  login  -u  anirudhadak2  -p  $MYPASS 
 docker tag  test  anirudhadak2/node-todo:test
 docker  push  anirudhadak2/node-todo:test
 docker logout 
 docker-compose down && docker-compose up -d
 docker ps
+
 ----------------------------------
 give the docker login password as parameter to security purpose 
 --------------------------------------------------------------------
